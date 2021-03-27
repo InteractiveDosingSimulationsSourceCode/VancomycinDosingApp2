@@ -8,6 +8,9 @@ library(ggplot2)
 library(pracma)
 
 
+#library(rsconnect)
+rsconnect::deployApp('C:/Users/kcdeback/Desktop/shiny aps/vancomycindosing')
+
 
 
 #Set up the UI
@@ -369,7 +372,7 @@ server <- function(input, output, session) {
     tagList("Reference:", url)
   })
   
-  url2 <- a("here", href="https://github.com/ShinyPharm5/Vancomycin/tree/master", target="_blank")
+  url2 <- a("here", href="https://github.com/InteractiveDosingSimulationsSourceCode/VancomycinDosingApp2", target="_blank")
   output$tab55 <- renderUI({
     tagList("The source code for this application is available ", url2)
   })
